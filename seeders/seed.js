@@ -63,6 +63,22 @@ async function seed() {
         birthdate: '1988-08-20',
         role: 1,
         description: 'Passionné par les animaux'
+      },
+      {
+        name: 'Thomas',
+        email: 'demo@kiboo.app',
+        password: bcrypt.hashSync('demo1234', 10),
+        birthdate: '1995-01-01',
+        role: 1,
+        description: 'Compte de démonstration Thomas'
+      },
+      {
+        name: 'Camille',
+        email: 'test@kiboo.app',
+        password: bcrypt.hashSync('test1234', 10),
+        birthdate: '1998-01-01',
+        role: 1,
+        description: 'Compte de démonstration Camille'
       }
     ]);
     console.log('✓ Utilisateurs créés:', users.length);
@@ -70,24 +86,54 @@ async function seed() {
     // 3. Créer des animaux
     const animals = await Animal.bulkCreate([
       {
-        content: 'Minou, chat européen de 2 ans, très câlin et sociable. Cherche famille aimante.',
-        user_id: 3
+        nom: 'Cookie',
+        espece: 'Chat',
+        age: '4 mois',
+        taille: 'Petit',
+        race: 'Europeen',
+        sexe: 'Male',
+        user_id: 3,
+        description: 'Cookie est un jeune chat tres social qui aime les jeux et les moments calmes. Il s adapte rapidement et recherche une famille douce et presente.'
       },
       {
-        content: 'Rex, chien Labrador de 4 ans, joueur et gentil avec les enfants.',
-        user_id: 3
+        nom: 'Rex',
+        espece: 'Chat',
+        age: '4 ans',
+        taille: 'Moyen',
+        race: 'Sacre de Birmanie',
+        sexe: 'Male',
+        user_id: 3,
+        description: 'Rex est calme et observateur. Il aime les routines stables et les espaces lumineux.'
       },
       {
-        content: 'Félix, chat tigré de 1 an, énergique et curieux.',
-        user_id: 3
+        nom: 'Penny',
+        espece: 'Chien',
+        age: '6 ans',
+        taille: 'Petit',
+        race: 'Caniche Nain',
+        sexe: 'Femelle',
+        user_id: 3,
+        description: 'Penny adore les promenades courtes et les interactions positives. Elle apprend vite.'
       },
       {
-        content: 'Bella, chatte siamoise de 3 ans, calme et affectueuse.',
-        user_id: 3
+        nom: 'Panpan',
+        espece: 'Lapin',
+        age: '10 ans',
+        taille: 'Petit',
+        race: 'Lapin nain',
+        sexe: 'Male',
+        user_id: 3,
+        description: 'Panpan est doux et discret. Il aime les environnements calmes, les cachettes confortables.'
       },
       {
-        content: 'Max, chien berger allemand de 5 ans, protecteur et loyal.',
-        user_id: 3
+        nom: 'Max',
+        espece: 'Chien',
+        age: '5 ans',
+        taille: 'Grand',
+        race: 'Berger Allemand',
+        sexe: 'Male',
+        user_id: 3,
+        description: 'Max est protecteur, loyal et très affectueux.'
       }
     ]);
     console.log('✓ Animaux créés:', animals.length);
