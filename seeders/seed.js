@@ -17,7 +17,9 @@ async function seed() {
     console.log('🌱 Début du seeding...');
 
     // Synchroniser la base de données
+    await sequelize.query('SET FOREIGN_KEY_CHECKS = 0');
     await sequelize.sync({ force: true });
+    await sequelize.query('SET FOREIGN_KEY_CHECKS = 1');
     console.log('✓ Base de données synchronisée');
 
     // 1. Créer les rôles
