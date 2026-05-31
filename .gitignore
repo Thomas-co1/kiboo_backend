@@ -114,3 +114,18 @@ public
 # Operating System Files
 .DS_Store
 Thumbs.db
+
+# Exclusions requested: ignore all Markdown reports, instructions and screenshot folders
+*.md
+screenshots/
+Captures_KIBOO/
+Captures_A_FAIRE_APP_BACKEND.md
+GUIDE_CAPTURES_ECRAN.md
+GUIDE_CAPTURES_IMPORTANTES_APP_BACKEND.md
+LISTE_CAPTURES_ECRAN.md
+ORAL_10MIN_STRUCTURE.md
+RAPPORT_*.md
+INSTRUCTIONS*.md
+*.resolved
+*.resolved.*
+
